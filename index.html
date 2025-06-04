@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qurban UNP Peduli 1447H</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    :root {
+      --primary: #1a5d1a;
+      --secondary: #f8b229;
+      --accent: #e74c3c;
+      --light: #f9f9f9;
+      --dark: #333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #00ffe5, #0a6800);
+      color: var(--dark);
+      line-height: 1.6;
+      background-image: url("https://cdn.pixabay.com/photo/2022/03/27/03/16/islamic-7093978_1280.jpg");
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      background-color: rgba(26, 93, 26, 0.9);
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--secondary), var(--accent));
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 10px;
+      background-color: white;
+      border-radius: 50%;
+      padding: 5px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 5px;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    nav {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-menu li {
+      flex: 1;
+      text-align: center;
+    }
+
+    .nav-menu a {
+      display: block;
+      padding: 15px;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border-bottom: 3px solid transparent;
+    }
+
+    .nav-menu a:hover, .nav-menu a.active {
+      background-color: rgba(26, 93, 26, 0.1);
+      border-bottom: 3px solid var(--secondary);
+    }
+
+    .nav-menu i {
+      margin-right: 8px;
+    }
+
+    .content-section {
+      display: none;
+      background-color: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .content-section.active {
+      display: block;
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--secondary);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: border 0.3s ease;
+    }
+
+    select {
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 1em;
+    }
+
+    input:focus, select:focus {
+      border-color: var(--primary);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(26, 93, 26, 0.2);
+    }
+
+    button {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    button:hover {
+      background-color: #134913;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    button i {
+      margin-right: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+
+    th {
+      background-color: var(--primary);
+      color: white;
+      font-weight: 600;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    .total-row {
+      font-weight: bold;
+      background-color: #f8f8f8 !important;
+    }
+
+    .total-row td {
+      border-top: 2px solid var(--primary);
+    }
+
+    .eid-decoration {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .eid-decoration img {
+      max-width: 200px;
+      height: auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: white;
+      background-color: var(--primary);
+      border-radius: 8px;
+      margin-top: 30px;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .modal-cancel {
+      background-color: #ccc;
+      color: #333;
+    }
+
+    .modal-confirm {
+      background-color: var(--accent);
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        flex-direction: column;
+      }
+      
+      .nav-menu a {
+        padding: 12px;
+      }
+      
+      header {
+        padding: 15px 0;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="https://unp.ac.id/patch/images/800/88c55c3c3da3b19e7b7939feedaceb35.png" alt="UNP Logo" class="logo">
+      <h1>QURBAN UNP PEDULI</h1>
+      <p class="subtitle">Tahun 1447 Hijriyah / 2025 Masehi</p>
+    </header>
+
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="#" class="nav-link active" data-target="pendaftaran"><i class="fas fa-user-plus"></i> Pendaftaran</a></li>
+        <li><a href="#" class="nav-link" data-target="potongan"><i class="fas fa-money-bill-wave"></i> Potongan Gaji</a></li>
+        <li><a href="#" class="nav-link" data-target="laporan"><i class="fas fa-file-alt"></i> Laporan</a></li>
+      </ul>
+    </nav>
+
+    <div class="eid-decoration">
+      <img src="https://awsimages.detik.net.id/community/media/visual/2023/12/12/idul-adha_169.jpeg?w=1200" alt="Gambar dari Google Drive" style="max-width: 50%; height: auto;">
+    </div>
+
+    <!-- Pendaftaran Section -->
+    <section id="pendaftaran" class="content-section active">
+      <h2><i class="fas fa-user-plus"></i> Form Pendaftaran Peserta Qurban</h2>
+      <form id="form-peserta">
+        <div class="form-group">
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" placeholder="Masukkan nama lengkap" required>
+        </div>
+        <div class="form-group">
+          <label for="nip">NIP</label>
+          <input type="text" id="nip" placeholder="Masukkan NIP" required>
+        </div>
+        <div class="form-group">
+          <label for="unit">Unit/Fakultas</label>
+          <input type="text" id="unit" placeholder="Masukkan unit/fakultas" required>
+        </div>
+        <button type="submit"><i class="fas fa-save"></i> Daftar Qurban</button>
+      </form>
+    </section>
+
+    <!-- Potongan Section -->
+    <section id="potongan" class="content-section">
+      <h2><i class="fas fa-money-bill-wave"></i> Form Input Potongan Gaji</h2>
+      <form id="form-potongan">
+        <div class="form-group">
+          <label for="nip-potong">Pilih Peserta</label>
+          <select id="nip-potong" required>
+            <option value="">-- Pilih NIP --</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="potongan">Jumlah Potongan per Bulan (Rp)</label>
+          <input type="number" id="potongan" placeholder="Masukkan jumlah potongan" required>
+        </div>
+        <button type="submit"><i class="fas fa-check-circle"></i> Simpan Potongan</button>
+        <button type="button" onclick="showPasswordModal()" style="background-color: #e74c3c; margin-left: 10px;">
+          <i class="fas fa-trash-alt"></i> Reset Data
+        </button>
+      </form>
+    </section>
+
+    <!-- Laporan Section -->
+    <section id="laporan" class="content-section">
+      <h2><i class="fas fa-file-alt"></i> Laporan Peserta & Potongan Qurban</h2>
+      <button onclick="tampilkanLaporan()"><i class="fas fa-print"></i> Tampilkan Laporan</button>
+      <div id="laporan-container"></div>
+    </section>
+
+    <footer>
+      <p>© 2025 UNP Peduli - Program Qurban 1447H</p>
+      <p>Panitia Qurban UNP | Telp: 0895360954329</p>
+    </footer>
+  </div>
+
+  <!-- Password Modal -->
+  <div id="passwordModal" class="modal">
+    <div class="modal-content">
+      <h3 style="color: var(--primary); margin-bottom: 20px;"><i class="fas fa-lock"></i> Konfirmasi Reset Data</h3>
+      <div class="form-group">
+        <label for="resetPassword">Masukkan Password Admin:</label>
+        <input type="password" id="resetPassword" placeholder="Password" style="width: 100%; padding: 10px; margin-bottom: 15px;">
+      </div>
+      <div class="modal-actions">
+        <button onclick="hidePasswordModal()" class="modal-cancel">Batal</button>
+        <button onclick="confirmResetData()" class="modal-confirm">Konfirmasi</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Navigation
+    const navLinks = document.querySelectorAll('.nav-link');
+    const contentSections = document.querySelectorAll('.content-section');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = e.target.getAttribute('data-target');
+        
+        // Update active nav link
+        navLinks.forEach(navLink => navLink.classList.remove('active'));
+        e.target.classList.add('active');
+        
+        // Show target section
+        contentSections.forEach(section => {
+          section.classList.remove('active');
+          if (section.id === target) {
+            section.classList.add('active');
+          }
+        });
+      });
+    });
+
+    // Data storage
+    let peserta = JSON.parse(localStorage.getItem('peserta')) || [];
+    let potongan = JSON.parse(localStorage.getItem('potongan')) || [];
+
+    // Form pendaftaran peserta qurban
+    document.getElementById('form-peserta').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const data = {
+        nama: document.getElementById('nama').value,
+        nip: document.getElementById('nip').value,
+        unit: document.getElementById('unit').value,
+        timestamp: new Date().toISOString()
+      };
+      
+      // Cek apakah NIP sudah ada
+      const existingIndex = peserta.findIndex(p => p.nip === data.nip);
+      if (existingIndex !== -1) {
+        if(confirm('NIP sudah terdaftar. Update data?')) {
+          peserta[existingIndex] = data;
+        } else {
+          return;
+        }
+      } else {
+        peserta.push(data);
+      }
+      
+      localStorage.setItem('peserta', JSON.stringify(peserta));
+      alert('Data peserta berhasil disimpan!');
+      this.reset();
+      isiDropdownNIP(); // Update dropdown
+    });
+
+    // Fungsi untuk mengisi dropdown NIP
+    function isiDropdownNIP() {
+      const selectNIP = document.getElementById('nip-potong');
+      
+      // Kosongkan dropdown kecuali opsi pertama
+      while(selectNIP.options.length > 1) {
+        selectNIP.remove(1);
+      }
+      
+      // Tambahkan opsi dari data peserta
+      peserta.forEach(p => {
+        const option = document.createElement('option');
+        option.value = p.nip;
+        option.textContent = `${p.nip} - ${p.nama} (${p.unit})`;
+        selectNIP.appendChild(option);
+      });
+      
+      // Jika ada data potongan sebelumnya, tampilkan
+      if(potongan.length > 0) {
+        const lastPotongan = potongan[potongan.length - 1];
+        document.getElementById('potongan').value = lastPotongan.jumlah || '';
+      }
+    }
+
+    // Form input potongan gaji
+    document.getElementById('form-potongan').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nip = document.getElementById('nip-potong').value;
+      const jumlah = parseFloat(document.getElementById('potongan').value);
+      
+      if (!nip || isNaN(jumlah)) {
+        alert('Harap lengkapi data dengan benar!');
+        return;
+      }
+      
+      const data = {
+        nip: nip,
+        jumlah: jumlah,
+        timestamp: new Date().toISOString()
+      };
+      
+      // Update jika NIP sudah ada
+      const index = potongan.findIndex(p => p.nip === data.nip);
+      if (index !== -1) {
+        potongan[index] = data;
+      } else {
+        potongan.push(data);
+      }
+      
+      localStorage.setItem('potongan', JSON.stringify(potongan));
+      alert('Potongan gaji berhasil disimpan!');
+      this.reset();
+      tampilkanLaporan(); // Update laporan
+    });
+
+    // Tampilkan laporan qurban
+    function tampilkanLaporan() {
+      const container = document.getElementById('laporan-container');
+      
+      if (peserta.length === 0) {
+        container.innerHTML = "<p style='text-align:center;padding:20px;color:#666;'>Belum ada peserta terdaftar.</p>";
+        return;
+      }
+
+      let laporanHTML = `
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama</th>
+              <th>NIP</th>
+              <th>Unit/Fakultas</th>
+              <th>Potongan/bulan</th>
+              <th>Total (12 bulan)</th>
+            </tr>
+          </thead>
+          <tbody>`;
+      
+      let totalKeseluruhan = 0;
+
+      peserta.forEach((p, index) => {
+        const pot = potongan.find(pt => pt.nip === p.nip);
+        const potonganBulanan = pot ? pot.jumlah : 0;
+        const total = potonganBulanan * 12;
+        totalKeseluruhan += total;
+
+        laporanHTML += `
+          <tr>
+            <td>${index + 1}</td>
+            <td>${p.nama}</td>
+            <td>${p.nip}</td>
+            <td>${p.unit}</td>
+            <td>Rp ${potonganBulanan.toLocaleString('id-ID')}</td>
+            <td>Rp ${total.toLocaleString('id-ID')}</td>
+          </tr>`;
+      });
+
+      laporanHTML += `
+          <tr class="total-row">
+            <td colspan="5"><strong>Total Keseluruhan</strong></td>
+            <td><strong>Rp ${totalKeseluruhan.toLocaleString('id-ID')}</strong></td>
+          </tr>
+        </tbody>
+      </table>`;
+
+      container.innerHTML = laporanHTML;
+    }
+
+    // Fungsi untuk menampilkan modal password
+    function showPasswordModal() {
+      document.getElementById('passwordModal').style.display = 'flex';
+      document.getElementById('resetPassword').focus();
+    }
+
+    // Fungsi untuk menyembunyikan modal password
+    function hidePasswordModal() {
+      document.getElementById('passwordModal').style.display = 'none';
+      document.getElementById('resetPassword').value = '';
+    }
+
+    // Fungsi reset data dengan password
+    function confirmResetData() {
+      const password = document.getElementById('resetPassword').value;
+      const correctPassword = "20251447adminsaja"; // Password yang ditentukan
+      
+      if (password === correctPassword) {
+        if(confirm('Yakin ingin menghapus semua data peserta dan potongan?')) {
+          localStorage.clear();
+          peserta = [];
+          potongan = [];
+          alert('Semua data berhasil direset!');
+          isiDropdownNIP();
+          tampilkanLaporan();
+          hidePasswordModal();
+        }
+      } else {
+        alert('Password salah! Reset data dibatalkan.');
+        hidePasswordModal();
+      }
+    }
+
+    // Inisialisasi saat halaman dimuat
+    document.addEventListener('DOMContentLoaded', function() {
+      isiDropdownNIP();
+      document.querySelector('.nav-link.active').click();
+      
+      // Auto-fill potongan saat memilih NIP
+      document.getElementById('nip-potong').addEventListener('change', function() {
+        const selectedNIP = this.value;
+        const pot = potongan.find(p => p.nip === selectedNIP);
+        document.getElementById('potongan').value = pot ? pot.jumlah : '';
+      });
+    });
+  </script>
+</body>
+</html>
