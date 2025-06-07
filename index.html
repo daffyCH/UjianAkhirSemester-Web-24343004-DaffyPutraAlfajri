@@ -3,598 +3,359 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Berqurban Bersama UNP Peduli 1447H</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Berqurban Bersama UNP Peduli</title>
   <style>
-    :root {
-      --primary: #1a5d1a;
-      --secondary: #f8b229;
-      --accent: #d62d20;
-      --light: #f5f5f5;
-      --dark: #333;
-      --text: #444;
-    }
-    
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f9f6ee;
-      color: var(--text);
-      line-height: 1.6;
-      background-image: url('https://images.unsplash.com/photo-1596386461350-326ccb383e9f?q=80&w=1000');
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center;
-      background-blend-mode: overlay;
-      background-color: rgba(249, 246, 238, 0.9);
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+      color: #333;
     }
-    
+
     .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    
-    /* Navbar */
-    nav {
-      background: linear-gradient(135deg, var(--primary) 0%, #2e7d32 100%);
-      color: white;
-      padding: 1rem 0;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    
-    .logo img {
-      height: 40px;
-    }
-    
-    .logo-text {
-      font-weight: 700;
-      font-size: 1.5rem;
-    }
-    
-    .logo-text span {
-      color: var(--secondary);
-    }
-    
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-    }
-    
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-    
-    .nav-links a:hover {
-      color: var(--secondary);
-      transform: translateY(-2px);
-    }
-    
-    /* Header */
-    header {
-      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                  url('https://images.unsplash.com/photo-1572431447238-425af62a9dcc?q=80&w=1000');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      text-align: center;
-      padding: 5rem 0;
-      margin-bottom: 3rem;
-      border-bottom: 5px solid var(--secondary);
-    }
-    
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-    
-    header p {
-      font-size: 1.2rem;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    
-    /* Cards */
-    .card-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 2rem;
-      margin-bottom: 3rem;
-    }
-    
-    .card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
       overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(10px);
     }
-    
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-    }
-    
-    .card-header {
-      background: linear-gradient(135deg, var(--primary) 0%, #2e7d32 100%);
+
+    .header {
+      background: linear-gradient(135deg, #2E8B57 0%, #006400 100%);
       color: white;
-      padding: 1.5rem;
-      font-size: 1.3rem;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    
-    .card-body {
-      padding: 1.5rem;
-    }
-    
-    .form-group {
-      margin-bottom: 1.5rem;
-    }
-    
-    .form-group label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-      color: var(--primary);
-    }
-    
-    .form-group input {
-      width: 100%;
-      padding: 12px 15px;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      font-size: 1rem;
-      transition: border-color 0.3s ease;
-    }
-    
-    .form-group input:focus {
-      outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(26, 93, 26, 0.2);
-    }
-    
-    .btn {
-      display: inline-block;
-      background: linear-gradient(135deg, var(--primary) 0%, #2e7d32 100%);
-      color: white;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
+      padding: 40px 30px;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
-    
-    .btn:hover {
-      background: linear-gradient(135deg, #134913 0%, #1b5e20 100%);
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      opacity: 0.3;
     }
-    
-    .btn-block {
+
+    .header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      position: relative;
+      z-index: 1;
+    }
+
+    .content {
+      padding: 40px 30px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h2 {
+      color: #2E8B57;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #e0f2e7;
+      position: relative;
+    }
+
+    h2::before {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(135deg, #2E8B57, #006400);
+      border-radius: 2px;
+    }
+
+    form {
+      background: linear-gradient(135deg, #f8fffe 0%, #f0f9f4 100%);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      border: 1px solid rgba(46, 139, 87, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    form::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(135deg, #2E8B57, #006400);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: 600;
+      color: #2E8B57;
       display: block;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    input {
+      padding: 12px 16px;
       width: 100%;
-    }
-    
-    .btn-secondary {
-      background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
-    }
-    
-    .btn-secondary:hover {
-      background: linear-gradient(135deg, #5a6268 0%, #4a5257 100%);
-    }
-    
-    /* Table */
-    .table-responsive {
-      overflow-x: auto;
-      margin-bottom: 2rem;
-      background: white;
+      border: 2px solid #e0f2e7;
       border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      padding: 1rem;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      background: white;
     }
-    
+
+    input:focus {
+      outline: none;
+      border-color: #2E8B57;
+      box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.1);
+      transform: translateY(-2px);
+    }
+
+    button {
+      background: linear-gradient(135deg, #2E8B57 0%, #006400 100%);
+      color: white;
+      padding: 14px 30px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    button:hover::before {
+      left: 100%;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(46, 139, 87, 0.3);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    .report-button {
+      background: linear-gradient(135deg, #4CAF50 0%, #2E8B57 100%);
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
-      margin: 1rem 0;
+      margin-top: 20px;
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     }
-    
-    th, td {
-      padding: 12px 15px;
-      text-align: left;
-      border-bottom: 1px solid #ddd;
-    }
-    
+
     th {
-      background-color: var(--primary);
+      background: linear-gradient(135deg, #2E8B57 0%, #228B22 100%);
       color: white;
-      font-weight: 600;
-    }
-    
-    tr:nth-child(even) {
-      background-color: #f9f9f9;
-    }
-    
-    tr:hover {
-      background-color: #f1f1f1;
-    }
-    
-    .total-row {
-      font-weight: bold;
-      background-color: #e8f5e9 !important;
-    }
-    
-    /* Footer */
-    footer {
-      background: linear-gradient(135deg, var(--primary) 0%, #2e7d32 100%);
-      color: white;
+      padding: 15px 12px;
       text-align: center;
-      padding: 2rem 0;
-      margin-top: 3rem;
+      font-weight: 600;
+      font-size: 0.95rem;
     }
-    
-    .footer-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
+
+    td {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #f0f9f4;
+      transition: background-color 0.3s ease;
     }
-    
-    .social-links {
-      display: flex;
-      gap: 1.5rem;
+
+    tr:hover td {
+      background-color: #f8fffe;
     }
-    
-    .social-links a {
-      color: white;
-      font-size: 1.5rem;
-      transition: all 0.3s ease;
+
+    tr:last-child td {
+      border-bottom: none;
+      font-weight: 600;
+      background: linear-gradient(135deg, #f0f9f4 0%, #e8f5e8 100%);
     }
-    
-    .social-links a:hover {
-      color: var(--secondary);
-      transform: translateY(-3px);
+
+    .no-data {
+      text-align: center;
+      padding: 40px;
+      color: #666;
+      font-style: italic;
+      background: #f8fffe;
+      border-radius: 10px;
+      border: 2px dashed #e0f2e7;
     }
-    
-    /* Responsive */
+
+    .stats-card {
+      background: linear-gradient(135deg, #ffffff 0%, #f8fffe 100%);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      border-left: 5px solid #2E8B57;
+      margin-bottom: 20px;
+    }
+
+    .stats-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #2E8B57;
+      margin-bottom: 5px;
+    }
+
+    .stats-label {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
     @media (max-width: 768px) {
-      .navbar {
-        flex-direction: column;
-        gap: 1rem;
+      .container {
+        margin: 10px;
+        border-radius: 15px;
       }
       
-      .nav-links {
-        gap: 1rem;
+      .header {
+        padding: 30px 20px;
       }
       
-      header h1 {
-        font-size: 2.2rem;
+      .header h1 {
+        font-size: 2rem;
       }
       
-      .card-container {
-        grid-template-columns: 1fr;
+      .content {
+        padding: 30px 20px;
       }
-    }
-    
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
-    .animate {
-      animation: fadeIn 0.6s ease forwards;
-    }
-    
-    .delay-1 { animation-delay: 0.2s; }
-    .delay-2 { animation-delay: 0.4s; }
-    .delay-3 { animation-delay: 0.6s; }
-    
-    /* Decorative elements */
-    .hijri-date {
-      background-color: var(--secondary);
-      color: var(--dark);
-      padding: 5px 10px;
-      border-radius: 20px;
-      font-weight: bold;
-      display: inline-block;
-      margin-bottom: 1rem;
-    }
-    
-    .section-title {
-      position: relative;
-      margin-bottom: 2rem;
-      padding-bottom: 10px;
-      color: var(--primary);
-    }
-    
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 80px;
-      height: 4px;
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      border-radius: 2px;
-    }
-    
-    /* Notification */
-    .notification {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      padding: 15px 20px;
-      background: var(--primary);
-      color: white;
-      border-radius: 5px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-      transform: translateX(200%);
-      transition: transform 0.3s ease;
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    
-    .notification.show {
-      transform: translateX(0);
-    }
-    
-    .notification.success {
-      background: var(--primary);
-    }
-    
-    .notification.error {
-      background: var(--accent);
+      
+      form {
+        padding: 20px;
+      }
+      
+      table {
+        font-size: 0.9rem;
+      }
+      
+      th, td {
+        padding: 10px 8px;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Navbar -->
-  <nav>
-    <div class="container navbar">
-      <div class="logo">
-        <img src="https://unp.ac.id/patch/images/800/88c55c3c3da3b19e7b7939feedaceb35.png" alt="UNP Peduli Logo">
-        <div class="logo-text">UNP <span>Peduli</span></div>
+  <div class="container">
+    <div class="header">
+      <h1>🕌 Berqurban Bersama UNP Peduli</h1>
+      <p>Sistem Pendaftaran dan Pengelolaan Qurban 1447 H</p>
+    </div>
+
+    <div class="content">
+      <div class="section">
+        <h2>📝 Form Pendaftaran Peserta Qurban</h2>
+        <form id="form-peserta">
+          <div class="form-group">
+            <label>Nama Lengkap:</label>
+            <input type="text" id="nama" required placeholder="Masukkan nama lengkap">
+          </div>
+
+          <div class="form-group">
+            <label>NIP:</label>
+            <input type="text" id="nip" required placeholder="Masukkan NIP">
+          </div>
+
+          <div class="form-group">
+            <label>Unit/Fakultas:</label>
+            <input type="text" id="unit" required placeholder="Masukkan unit/fakultas">
+          </div>
+
+          <button type="submit">✅ Daftar Qurban</button>
+        </form>
       </div>
-      <div class="nav-links">
-        <a href="#daftar"><i class="fas fa-user-plus"></i> Daftar Qurban</a>
-        <a href="#potongan"><i class="fas fa-money-bill-wave"></i> Potongan Gaji</a>
-        <a href="#laporan"><i class="fas fa-file-alt"></i> Laporan</a>
-        <a href="#tentang"><i class="fas fa-info-circle"></i> Tentang</a>
+
+      <div class="section">
+        <h2>💰 Form Input Potongan Gaji</h2>
+        <form id="form-potongan">
+          <div class="form-group">
+            <label>NIP:</label>
+            <input type="text" id="nip-potong" required placeholder="Masukkan NIP">
+          </div>
+
+          <div class="form-group">
+            <label>Jumlah Potongan per Bulan (Rp):</label>
+            <input type="number" id="potongan" required placeholder="Masukkan jumlah potongan">
+          </div>
+
+          <button type="submit">💾 Simpan Potongan</button>
+        </form>
+      </div>
+
+      <div class="section">
+        <h2>📊 Laporan Peserta & Potongan Qurban (1447 H)</h2>
+        <button class="report-button" onclick="tampilkanLaporan()">📋 Tampilkan Laporan</button>
+        <div id="laporan"></div>
       </div>
     </div>
-  </nav>
-  
-  <!-- Header -->
-  <header class="animate">
-    <div class="container">
-      <div class="hijri-date">1447 Hijriyah</div>
-      <h1>Program Qurban UNP Peduli</h1>
-      <p>Mari berpartisipasi dalam program qurban tahun ini untuk berbagi kebahagiaan dengan sesama. "Dan berqurbanlah kamu, sesungguhnya itu adalah sunnah nabimu."</p>
-    </div>
-  </header>
-  
-  <main class="container">
-    <!-- Registration Form -->
-    <section id="daftar" class="animate delay-1">
-      <h2 class="section-title">Form Pendaftaran Peserta Qurban</h2>
-      <div class="card-container">
-        <div class="card">
-          <div class="card-header">
-            <i class="fas fa-user-edit"></i> Data Peserta
-          </div>
-          <div class="card-body">
-            <form id="form-peserta">
-              <div class="form-group">
-                <label for="nama">Nama Lengkap</label>
-                <input type="text" id="nama" placeholder="Masukkan nama lengkap" required>
-              </div>
-              <div class="form-group">
-                <label for="nip">NIP</label>
-                <input type="text" id="nip" placeholder="Masukkan NIP" required>
-              </div>
-              <div class="form-group">
-                <label for="unit">Unit/Fakultas</label>
-                <input type="text" id="unit" placeholder="Masukkan unit/fakultas" required>
-              </div>
-              <button type="submit" class="btn btn-block">
-                <i class="fas fa-paper-plane"></i> Daftar Qurban
-              </button>
-            </form>
-          </div>
-        </div>
-        
-        <div class="card">
-          <div class="card-header">
-            <i class="fas fa-info-circle"></i> Informasi Qurban
-          </div>
-          <div class="card-body">
-            <h3 style="color: var(--primary); margin-bottom: 1rem;">Panduan Berqurban</h3>
-            <ul style="list-style-type: none;">
-              <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
-                <i class="fas fa-check-circle" style="color: var(--primary);"></i>
-                <span>Qurban sapi (1/7): Rp 3.500.000</span>
-              </li>
-              <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
-                <i class="fas fa-check-circle" style="color: var(--primary);"></i>
-                <span>Qurban kambing (perorangan): Rp 2.500.000</span>
-              </li>
-              <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
-                <i class="fas fa-check-circle" style="color: var(--primary);"></i>
-                <span>Pembayaran dapat dicicil melalui potongan gaji</span>
-              </li>
-            </ul>
-            <div style="margin-top: 2rem; padding: 1rem; background-color: #e8f5e9; border-radius: 6px;">
-              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Batas Pendaftaran</h4>
-              <p>10 Dzulhijjah 1447 H / 16 Juni 2026</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Salary Deduction Form -->
-    <section id="potongan" class="animate delay-2">
-      <h2 class="section-title">Form Input Potongan Gaji</h2>
-      <div class="card">
-        <div class="card-header">
-          <i class="fas fa-money-bill-alt"></i> Potongan Gaji
-        </div>
-        <div class="card-body">
-          <form id="form-potongan">
-            <div class="form-group">
-              <label for="nip-potong">NIP</label>
-              <input type="text" id="nip-potong" placeholder="Masukkan NIP peserta" required>
-            </div>
-            <div class="form-group">
-              <label for="potongan">Jumlah Potongan per Bulan (Rp)</label>
-              <input type="number" id="potongan" placeholder="Masukkan jumlah potongan" required>
-            </div>
-            <button type="submit" class="btn btn-block">
-              <i class="fas fa-save"></i> Simpan Potongan
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Report Section -->
-    <section id="laporan" class="animate delay-3">
-      <h2 class="section-title">Laporan Peserta & Potongan Qurban</h2>
-      <button onclick="tampilkanLaporan()" class="btn" style="margin-bottom: 1.5rem;">
-        <i class="fas fa-sync-alt"></i> Muat Ulang Laporan
-      </button>
-      <div id="laporan" class="table-responsive">
-        <p style="text-align: center; color: #666;">Klik tombol di atas untuk menampilkan laporan peserta qurban</p>
-      </div>
-    </section>
-  </main>
-  
-  <!-- About Section -->
-  <section id="tentang" style="background-color: var(--primary); color: white; padding: 3rem 0;">
-    <div class="container">
-      <h2 class="section-title" style="color: white;">Tentang Program Qurban UNP Peduli</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-        <div>
-          <h3 style="margin-bottom: 1rem; color: var(--secondary);">Visi</h3>
-          <p>Menjadi program qurban perguruan tinggi yang mampu menyatukan civitas akademika dalam berbagi kebahagiaan dengan masyarakat kurang mampu melalui ibadah qurban.</p>
-        </div>
-        <div>
-          <h3 style="margin-bottom: 1rem; color: var(--secondary);">Misi</h3>
-          <ul style="list-style-type: none;">
-            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="margin-right: 8px;"></i> Memudahkan berqurban bagi dosen dan tenaga kependidikan</li>
-            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="margin-right: 8px;"></i> Menyalurkan hewan qurban ke daerah yang membutuhkan</li>
-            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="margin-right: 8px;"></i> Membangun solidaritas sesama civitas akademika</li>
-          </ul>
-        </div>
-        <div>
-          <h3 style="margin-bottom: 1rem; color: var(--secondary);">Kontak</h3>
-          <p><i class="fas fa-phone" style="margin-right: 8px;"></i> (0751) 123456</p>
-          <p><i class="fas fa-envelope" style="margin-right: 8px;"></i> qurban@unp-peduli.ac.id</p>
-          <p><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Gd. Rektorat UNP Lt. 3</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Footer -->
-  <footer>
-    <div class="container footer-content">
-      <div class="logo" style="margin-bottom: 1rem;">
-        <img src="https://unp.ac.id/patch/images/800/88c55c3c3da3b19e7b7939feedaceb35.png" alt="UNP Peduli Logo">
-        <div class="logo-text">UNP <span>Peduli</span></div>
-      </div>
-      <p>Program Qurban 1447 Hijriyah / 2026 Masehi</p>
-      <div class="social-links">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
-      </div>
-      <p style="margin-top: 1rem; font-size: 0.9rem;">&copy; 2026 UNP Peduli. All rights reserved.</p>
-    </div>
-  </footer>
-  
-  <!-- Notification -->
-  <div id="notification" class="notification">
-    <i class="fas fa-check-circle"></i>
-    <span id="notification-message">Peserta berhasil didaftarkan!</span>
   </div>
-  
+
   <script>
     // Ambil dari localStorage jika ada
     let peserta = JSON.parse(localStorage.getItem('peserta')) || [];
     let potongan = JSON.parse(localStorage.getItem('potongan')) || [];
-    
-    // Notification function
-    function showNotification(message, type = 'success') {
-      const notification = document.getElementById('notification');
-      const notificationMessage = document.getElementById('notification-message');
-      
-      notificationMessage.textContent = message;
-      notification.className = `notification ${type}`;
-      notification.classList.add('show');
-      
-      // Set icon based on type
-      const icon = notification.querySelector('i');
-      icon.className = type === 'success' ? 'fas fa-check-circle' : 'fas fa-exclamation-circle';
-      
-      setTimeout(() => {
-        notification.classList.remove('show');
-      }, 3000);
-    }
-    
-    // Smooth scrolling for navigation
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 80,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-    
+
     // Form pendaftaran peserta qurban
     document.getElementById('form-peserta').addEventListener('submit', function(e) {
       e.preventDefault();
@@ -603,20 +364,12 @@
         nip: document.getElementById('nip').value,
         unit: document.getElementById('unit').value
       };
-      
-      // Check if NIP already exists
-      const existing = peserta.find(p => p.nip === data.nip);
-      if (existing) {
-        showNotification('NIP sudah terdaftar!', 'error');
-        return;
-      }
-      
       peserta.push(data);
       localStorage.setItem('peserta', JSON.stringify(peserta));
-      showNotification('Peserta berhasil didaftarkan!');
+      alert('Peserta berhasil didaftarkan!');
       this.reset();
     });
-    
+
     // Form input potongan gaji
     document.getElementById('form-potongan').addEventListener('submit', function(e) {
       e.preventDefault();
@@ -624,121 +377,57 @@
         nip: document.getElementById('nip-potong').value,
         jumlah: parseFloat(document.getElementById('potongan').value)
       };
-      
-      // Check if participant exists
-      const participantExists = peserta.some(p => p.nip === data.nip);
-      if (!participantExists) {
-        showNotification('NIP tidak ditemukan! Silakan daftar peserta terlebih dahulu.', 'error');
-        return;
-      }
-      
-      // Update if NIP already exists
+      // Update jika NIP sudah ada
       const index = potongan.findIndex(p => p.nip === data.nip);
       if (index !== -1) {
         potongan[index].jumlah = data.jumlah;
-        showNotification('Potongan gaji diperbarui!');
       } else {
         potongan.push(data);
-        showNotification('Potongan gaji disimpan!');
       }
-      
       localStorage.setItem('potongan', JSON.stringify(potongan));
+      alert('Potongan gaji disimpan!');
       this.reset();
     });
-    
+
     // Tampilkan laporan qurban
     function tampilkanLaporan() {
-      const laporanElement = document.getElementById('laporan');
-      
       if (peserta.length === 0) {
-        laporanElement.innerHTML = `
-          <div style="text-align: center; padding: 2rem; background: white; border-radius: 8px;">
-            <i class="fas fa-info-circle" style="font-size: 3rem; color: #666; margin-bottom: 1rem;"></i>
-            <h3 style="color: var(--primary);">Belum ada peserta terdaftar</h3>
-            <p>Silakan daftarkan peserta melalui form pendaftaran di atas.</p>
-          </div>
-        `;
+        document.getElementById('laporan').innerHTML = '<div class="no-data">📋 Belum ada peserta terdaftar.</div>';
         return;
       }
-      
-      let laporanHTML = `
-        <table>
-          <thead>
-            <tr>
-              <th>No</th>
-              <th>Nama</th>
-              <th>NIP</th>
-              <th>Unit</th>
-              <th>Potongan/bulan</th>
-              <th>Total (12 bulan)</th>
-            </tr>
-          </thead>
-          <tbody>
-      `;
-      
+
+      let laporanHTML = '<table><tr><th>Nama</th><th>NIP</th><th>Unit</th><th>Potongan/bulan</th><th>Total (12 bulan)</th></tr>';
       let totalKeseluruhan = 0;
-      
-      peserta.forEach((p, index) => {
+
+      peserta.forEach(p => {
         const pot = potongan.find(pt => pt.nip === p.nip);
         const potonganBulanan = pot ? pot.jumlah : 0;
         const total = potonganBulanan * 12;
         totalKeseluruhan += total;
-        
-        laporanHTML += `
-          <tr>
-            <td>${index + 1}</td>
-            <td>${p.nama}</td>
-            <td>${p.nip}</td>
-            <td>${p.unit}</td>
-            <td>Rp ${potonganBulanan.toLocaleString('id-ID')}</td>
-            <td>Rp ${total.toLocaleString('id-ID')}</td>
-          </tr>
-        `;
+
+        laporanHTML += `<tr>
+          <td>${p.nama}</td>
+          <td>${p.nip}</td>
+          <td>${p.unit}</td>
+          <td>Rp ${potonganBulanan.toLocaleString('id-ID')}</td>
+          <td>Rp ${total.toLocaleString('id-ID')}</td>
+        </tr>`;
       });
-      
-      laporanHTML += `
-          <tr class="total-row">
-            <td colspan="5"><strong>Total Keseluruhan</strong></td>
-            <td><strong>Rp ${totalKeseluruhan.toLocaleString('id-ID')}</strong></td>
-          </tr>
-        </tbody>
-      </table>
-      
-      <div style="margin-top: 2rem; display: flex; justify-content: flex-end;">
-        <button onclick="exportToExcel()" class="btn">
-          <i class="fas fa-file-excel"></i> Export to Excel
-        </button>
-      </div>
+
+      laporanHTML += `<tr>
+        <td colspan="4"><strong>Total Keseluruhan</strong></td>
+        <td><strong>Rp ${totalKeseluruhan.toLocaleString('id-ID')}</strong></td>
+      </tr></table>`;
+
+      // Tambahkan statistik
+      const statsHTML = `
+        <div class="stats-card">
+          <div class="stats-number">${peserta.length}</div>
+          <div class="stats-label">Total Peserta Terdaftar</div>
+        </div>
       `;
-      
-      laporanElement.innerHTML = laporanHTML;
-    }
-    
-    // Export to Excel function
-    function exportToExcel() {
-      // This is a simplified version. In a real app, you might use a library like SheetJS
-      let csv = 'No,Nama,NIP,Unit,Potongan per Bulan,Total (12 bulan)\n';
-      
-      peserta.forEach((p, index) => {
-        const pot = potongan.find(pt => pt.nip === p.nip);
-        const potonganBulanan = pot ? pot.jumlah : 0;
-        const total = potonganBulanan * 12;
-        
-        csv += `${index + 1},${p.nama},${p.nip},${p.unit},${potonganBulanan},${total}\n`;
-      });
-      
-      const hiddenElement = document.createElement('a');
-      hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
-      hiddenElement.target = '_blank';
-      hiddenElement.download = 'laporan_qurban_unp.csv';
-      hiddenElement.click();
-      
-      showNotification('Laporan berhasil diekspor ke CSV!');
-    }
-    
-    // Initialize - show report if there's data
-    if (peserta.length > 0) {
-      tampilkanLaporan();
+
+      document.getElementById('laporan').innerHTML = statsHTML + laporanHTML;
     }
   </script>
 </body>
