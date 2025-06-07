@@ -2,525 +2,665 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Qurban UNP Peduli 1447H</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Berqurban Bersama UNP Peduli 1447H</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
       --primary: #1a5d1a;
       --secondary: #f8b229;
-      --accent: #e74c3c;
-      --light: #f9f9f9;
+      --accent: #d62d20;
+      --light: #f5f5f5;
       --dark: #333;
+      --text: #444;
     }
-
+    
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
+    
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #00ffe5, #0a6800);
-      color: var(--dark);
+      background-color: #f9f6ee;
+      color: var(--text);
       line-height: 1.6;
-      background-image: url("https://cdn.pixabay.com/photo/2022/03/27/03/16/islamic-7093978_1280.jpg");
+      background-image: url('https://images.unsplash.com/photo-1596386461350-326ccb383e9f?q=80&w=1000');
       background-size: cover;
       background-attachment: fixed;
       background-position: center;
+      background-blend-mode: overlay;
+      background-color: rgba(249, 246, 238, 0.9);
     }
-
+    
     .container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 0 20px;
     }
-
-    header {
-      background-color: rgba(26, 93, 26, 0.9);
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-      border-radius: 0 0 10px 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    header::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 5px;
-      background: linear-gradient(90deg, var(--secondary), var(--accent));
-    }
-
-    .logo {
-      width: 80px;
-      height: 80px;
-      margin-bottom: 10px;
-      background-color: white;
-      border-radius: 50%;
-      padding: 5px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 5px;
-    }
-
-    .subtitle {
-      font-size: 1rem;
-      opacity: 0.9;
-    }
-
+    
+    /* Navbar */
     nav {
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
+      background: linear-gradient(135deg, var(--primary) 0%, #2e7d32 100%);
+      color: white;
+      padding: 1rem 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-
-    .nav-menu {
+    
+    .navbar {
       display: flex;
-      list-style: none;
+      justify-content: space-between;
+      align-items: center;
     }
-
-    .nav-menu li {
-      flex: 1;
-      text-align: center;
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-
-    .nav-menu a {
-      display: block;
-      padding: 15px;
-      color: var(--primary);
+    
+    .logo img {
+      height: 40px;
+    }
+    
+    .logo-text {
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+    
+    .logo-text span {
+      color: var(--secondary);
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    
+    .nav-links a {
+      color: white;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 500;
       transition: all 0.3s ease;
-      border-bottom: 3px solid transparent;
+      display: flex;
+      align-items: center;
+      gap: 5px;
     }
-
-    .nav-menu a:hover, .nav-menu a.active {
-      background-color: rgba(26, 93, 26, 0.1);
-      border-bottom: 3px solid var(--secondary);
+    
+    .nav-links a:hover {
+      color: var(--secondary);
+      transform: translateY(-2px);
     }
-
-    .nav-menu i {
-      margin-right: 8px;
+    
+    /* Header */
+    header {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                  url('https://images.unsplash.com/photo-1572431447238-425af62a9dcc?q=80&w=1000');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 5rem 0;
+      margin-bottom: 3rem;
+      border-bottom: 5px solid var(--secondary);
     }
-
-    .content-section {
-      display: none;
-      background-color: white;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
-      animation: fadeIn 0.5s ease;
+    
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+    
+    header p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
     }
-
-    .content-section.active {
-      display: block;
+    
+    /* Cards */
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
     }
-
-    h2 {
-      color: var(--primary);
-      margin-bottom: 20px;
-      padding-bottom: 10px;
-      border-bottom: 2px solid var(--secondary);
+    
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .card-header {
+      background: linear-gradient(135deg, var(--primary) 0%, #2e7d32 100%);
+      color: white;
+      padding: 1.5rem;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .card-body {
+      padding: 1.5rem;
+    }
+    
     .form-group {
-      margin-bottom: 20px;
+      margin-bottom: 1.5rem;
     }
-
-    label {
+    
+    .form-group label {
       display: block;
-      margin-bottom: 8px;
+      margin-bottom: 0.5rem;
       font-weight: 600;
       color: var(--primary);
     }
-
-    input, select {
+    
+    .form-group input {
       width: 100%;
       padding: 12px 15px;
       border: 1px solid #ddd;
       border-radius: 6px;
-      font-size: 16px;
-      transition: border 0.3s ease;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
     }
-
-    select {
-      appearance: none;
-      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-      background-repeat: no-repeat;
-      background-position: right 10px center;
-      background-size: 1em;
-    }
-
-    input:focus, select:focus {
-      border-color: var(--primary);
+    
+    .form-group input:focus {
       outline: none;
+      border-color: var(--primary);
       box-shadow: 0 0 0 3px rgba(26, 93, 26, 0.2);
     }
-
-    button {
-      background-color: var(--primary);
+    
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--primary) 0%, #2e7d32 100%);
       color: white;
-      border: none;
       padding: 12px 25px;
+      border: none;
       border-radius: 6px;
-      cursor: pointer;
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 600;
+      cursor: pointer;
       transition: all 0.3s ease;
-      display: inline-flex;
-      align-items: center;
+      text-align: center;
     }
-
-    button:hover {
-      background-color: #134913;
+    
+    .btn:hover {
+      background: linear-gradient(135deg, #134913 0%, #1b5e20 100%);
       transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
-
-    button i {
-      margin-right: 8px;
+    
+    .btn-block {
+      display: block;
+      width: 100%;
     }
-
+    
+    .btn-secondary {
+      background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+    }
+    
+    .btn-secondary:hover {
+      background: linear-gradient(135deg, #5a6268 0%, #4a5257 100%);
+    }
+    
+    /* Table */
+    .table-responsive {
+      overflow-x: auto;
+      margin-bottom: 2rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+    }
+    
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 20px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      margin: 1rem 0;
     }
-
+    
     th, td {
       padding: 12px 15px;
       text-align: left;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid #ddd;
     }
-
+    
     th {
       background-color: var(--primary);
       color: white;
       font-weight: 600;
     }
-
+    
     tr:nth-child(even) {
       background-color: #f9f9f9;
     }
-
+    
     tr:hover {
       background-color: #f1f1f1;
     }
-
+    
     .total-row {
       font-weight: bold;
-      background-color: #f8f8f8 !important;
+      background-color: #e8f5e9 !important;
     }
-
-    .total-row td {
-      border-top: 2px solid var(--primary);
-    }
-
-    .eid-decoration {
-      text-align: center;
-      margin: 20px 0;
-    }
-
-    .eid-decoration img {
-      max-width: 200px;
-      height: auto;
-    }
-
+    
+    /* Footer */
     footer {
-      text-align: center;
-      padding: 20px;
+      background: linear-gradient(135deg, var(--primary) 0%, #2e7d32 100%);
       color: white;
-      background-color: var(--primary);
-      border-radius: 8px;
-      margin-top: 30px;
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 3rem;
     }
-
-    /* Modal Styles */
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.5);
-      z-index: 1000;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .modal-content {
-      background-color: white;
-      padding: 30px;
-      border-radius: 10px;
-      width: 90%;
-      max-width: 400px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    }
-
-    .modal-actions {
+    
+    .footer-content {
       display: flex;
-      justify-content: flex-end;
-      gap: 10px;
-      margin-top: 20px;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
     }
-
-    .modal-cancel {
-      background-color: #ccc;
-      color: #333;
+    
+    .social-links {
+      display: flex;
+      gap: 1.5rem;
     }
-
-    .modal-confirm {
-      background-color: var(--accent);
+    
+    .social-links a {
+      color: white;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
     }
-
+    
+    .social-links a:hover {
+      color: var(--secondary);
+      transform: translateY(-3px);
+    }
+    
+    /* Responsive */
     @media (max-width: 768px) {
-      .nav-menu {
+      .navbar {
         flex-direction: column;
+        gap: 1rem;
       }
       
-      .nav-menu a {
-        padding: 12px;
+      .nav-links {
+        gap: 1rem;
       }
       
-      header {
-        padding: 15px 0;
+      header h1 {
+        font-size: 2.2rem;
       }
       
-      h1 {
-        font-size: 1.8rem;
+      .card-container {
+        grid-template-columns: 1fr;
       }
+    }
+    
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .animate {
+      animation: fadeIn 0.6s ease forwards;
+    }
+    
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.6s; }
+    
+    /* Decorative elements */
+    .hijri-date {
+      background-color: var(--secondary);
+      color: var(--dark);
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    
+    .section-title {
+      position: relative;
+      margin-bottom: 2rem;
+      padding-bottom: 10px;
+      color: var(--primary);
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      border-radius: 2px;
+    }
+    
+    /* Notification */
+    .notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 15px 20px;
+      background: var(--primary);
+      color: white;
+      border-radius: 5px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transform: translateX(200%);
+      transition: transform 0.3s ease;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .notification.show {
+      transform: translateX(0);
+    }
+    
+    .notification.success {
+      background: var(--primary);
+    }
+    
+    .notification.error {
+      background: var(--accent);
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <img src="https://unp.ac.id/patch/images/800/88c55c3c3da3b19e7b7939feedaceb35.png" alt="UNP Logo" class="logo">
-      <h1>QURBAN UNP PEDULI</h1>
-      <p class="subtitle">Tahun 1447 Hijriyah / 2026 Masehi</p>
-    </header>
-
-    <nav>
-      <ul class="nav-menu">
-        <li><a href="#" class="nav-link active" data-target="pendaftaran"><i class="fas fa-user-plus"></i> Pendaftaran</a></li>
-        <li><a href="#" class="nav-link" data-target="potongan"><i class="fas fa-money-bill-wave"></i> Potongan Gaji</a></li>
-        <li><a href="#" class="nav-link" data-target="laporan"><i class="fas fa-file-alt"></i> Laporan</a></li>
-      </ul>
-    </nav>
-
-    <div class="eid-decoration">
-      <img src="https://awsimages.detik.net.id/community/media/visual/2023/12/12/idul-adha_169.jpeg?w=1200" alt="Gambar dari Google Drive" style="max-width: 50%; height: auto;">
-    </div>
-
-    <!-- Pendaftaran Section -->
-    <section id="pendaftaran" class="content-section active">
-      <h2><i class="fas fa-user-plus"></i> Form Pendaftaran Peserta Qurban</h2>
-      <form id="form-peserta">
-        <div class="form-group">
-          <label for="nama">Nama Lengkap</label>
-          <input type="text" id="nama" placeholder="Masukkan nama lengkap" required>
-        </div>
-        <div class="form-group">
-          <label for="nip">NIP</label>
-          <input type="text" id="nip" placeholder="Masukkan NIP" required>
-        </div>
-        <div class="form-group">
-          <label for="unit">Unit/Fakultas</label>
-          <input type="text" id="unit" placeholder="Masukkan unit/fakultas" required>
-        </div>
-        <button type="submit"><i class="fas fa-save"></i> Daftar Qurban</button>
-      </form>
-    </section>
-
-    <!-- Potongan Section -->
-    <section id="potongan" class="content-section">
-      <h2><i class="fas fa-money-bill-wave"></i> Form Input Potongan Gaji</h2>
-      <form id="form-potongan">
-        <div class="form-group">
-          <label for="nip-potong">Pilih Peserta</label>
-          <select id="nip-potong" required>
-            <option value="">-- Pilih NIP --</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="potongan">Jumlah Potongan per Bulan (Rp)</label>
-          <input type="number" id="potongan" placeholder="Masukkan jumlah potongan" required>
-        </div>
-        <button type="submit"><i class="fas fa-check-circle"></i> Simpan Potongan</button>
-        <button type="button" onclick="showPasswordModal()" style="background-color: #e74c3c; margin-left: 10px;">
-          <i class="fas fa-trash-alt"></i> Reset Data
-        </button>
-      </form>
-    </section>
-
-    <!-- Laporan Section -->
-    <section id="laporan" class="content-section">
-      <h2><i class="fas fa-file-alt"></i> Laporan Peserta & Potongan Qurban</h2>
-      <button onclick="tampilkanLaporan()"><i class="fas fa-print"></i> Tampilkan Laporan</button>
-      <div id="laporan-container"></div>
-    </section>
-
-    <footer>
-      <p>© 2026 UNP Peduli - Program Qurban 1447H</p>
-      <p>Panitia Qurban UNP | Telp: 0895360954329</p>
-    </footer>
-  </div>
-
-  <!-- Password Modal -->
-  <div id="passwordModal" class="modal">
-    <div class="modal-content">
-      <h3 style="color: var(--primary); margin-bottom: 20px;"><i class="fas fa-lock"></i> Konfirmasi Reset Data</h3>
-      <div class="form-group">
-        <label for="resetPassword">Masukkan Password Admin:</label>
-        <input type="password" id="resetPassword" placeholder="Password" style="width: 100%; padding: 10px; margin-bottom: 15px;">
+  <!-- Navbar -->
+  <nav>
+    <div class="container navbar">
+      <div class="logo">
+        <img src="https://unp.ac.id/patch/images/800/88c55c3c3da3b19e7b7939feedaceb35.png" alt="UNP Peduli Logo">
+        <div class="logo-text">UNP <span>Peduli</span></div>
       </div>
-      <div class="modal-actions">
-        <button onclick="hidePasswordModal()" class="modal-cancel">Batal</button>
-        <button onclick="confirmResetData()" class="modal-confirm">Konfirmasi</button>
+      <div class="nav-links">
+        <a href="#daftar"><i class="fas fa-user-plus"></i> Daftar Qurban</a>
+        <a href="#potongan"><i class="fas fa-money-bill-wave"></i> Potongan Gaji</a>
+        <a href="#laporan"><i class="fas fa-file-alt"></i> Laporan</a>
+        <a href="#tentang"><i class="fas fa-info-circle"></i> Tentang</a>
       </div>
     </div>
+  </nav>
+  
+  <!-- Header -->
+  <header class="animate">
+    <div class="container">
+      <div class="hijri-date">1447 Hijriyah</div>
+      <h1>Program Qurban UNP Peduli</h1>
+      <p>Mari berpartisipasi dalam program qurban tahun ini untuk berbagi kebahagiaan dengan sesama. "Dan berqurbanlah kamu, sesungguhnya itu adalah sunnah nabimu."</p>
+    </div>
+  </header>
+  
+  <main class="container">
+    <!-- Registration Form -->
+    <section id="daftar" class="animate delay-1">
+      <h2 class="section-title">Form Pendaftaran Peserta Qurban</h2>
+      <div class="card-container">
+        <div class="card">
+          <div class="card-header">
+            <i class="fas fa-user-edit"></i> Data Peserta
+          </div>
+          <div class="card-body">
+            <form id="form-peserta">
+              <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" placeholder="Masukkan nama lengkap" required>
+              </div>
+              <div class="form-group">
+                <label for="nip">NIP</label>
+                <input type="text" id="nip" placeholder="Masukkan NIP" required>
+              </div>
+              <div class="form-group">
+                <label for="unit">Unit/Fakultas</label>
+                <input type="text" id="unit" placeholder="Masukkan unit/fakultas" required>
+              </div>
+              <button type="submit" class="btn btn-block">
+                <i class="fas fa-paper-plane"></i> Daftar Qurban
+              </button>
+            </form>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-header">
+            <i class="fas fa-info-circle"></i> Informasi Qurban
+          </div>
+          <div class="card-body">
+            <h3 style="color: var(--primary); margin-bottom: 1rem;">Panduan Berqurban</h3>
+            <ul style="list-style-type: none;">
+              <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
+                <i class="fas fa-check-circle" style="color: var(--primary);"></i>
+                <span>Qurban sapi (1/7): Rp 3.500.000</span>
+              </li>
+              <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
+                <i class="fas fa-check-circle" style="color: var(--primary);"></i>
+                <span>Qurban kambing (perorangan): Rp 2.500.000</span>
+              </li>
+              <li style="margin-bottom: 0.8rem; display: flex; gap: 10px;">
+                <i class="fas fa-check-circle" style="color: var(--primary);"></i>
+                <span>Pembayaran dapat dicicil melalui potongan gaji</span>
+              </li>
+            </ul>
+            <div style="margin-top: 2rem; padding: 1rem; background-color: #e8f5e9; border-radius: 6px;">
+              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Batas Pendaftaran</h4>
+              <p>10 Dzulhijjah 1447 H / 16 Juni 2026</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Salary Deduction Form -->
+    <section id="potongan" class="animate delay-2">
+      <h2 class="section-title">Form Input Potongan Gaji</h2>
+      <div class="card">
+        <div class="card-header">
+          <i class="fas fa-money-bill-alt"></i> Potongan Gaji
+        </div>
+        <div class="card-body">
+          <form id="form-potongan">
+            <div class="form-group">
+              <label for="nip-potong">NIP</label>
+              <input type="text" id="nip-potong" placeholder="Masukkan NIP peserta" required>
+            </div>
+            <div class="form-group">
+              <label for="potongan">Jumlah Potongan per Bulan (Rp)</label>
+              <input type="number" id="potongan" placeholder="Masukkan jumlah potongan" required>
+            </div>
+            <button type="submit" class="btn btn-block">
+              <i class="fas fa-save"></i> Simpan Potongan
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Report Section -->
+    <section id="laporan" class="animate delay-3">
+      <h2 class="section-title">Laporan Peserta & Potongan Qurban</h2>
+      <button onclick="tampilkanLaporan()" class="btn" style="margin-bottom: 1.5rem;">
+        <i class="fas fa-sync-alt"></i> Muat Ulang Laporan
+      </button>
+      <div id="laporan" class="table-responsive">
+        <p style="text-align: center; color: #666;">Klik tombol di atas untuk menampilkan laporan peserta qurban</p>
+      </div>
+    </section>
+  </main>
+  
+  <!-- About Section -->
+  <section id="tentang" style="background-color: var(--primary); color: white; padding: 3rem 0;">
+    <div class="container">
+      <h2 class="section-title" style="color: white;">Tentang Program Qurban UNP Peduli</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        <div>
+          <h3 style="margin-bottom: 1rem; color: var(--secondary);">Visi</h3>
+          <p>Menjadi program qurban perguruan tinggi yang mampu menyatukan civitas akademika dalam berbagi kebahagiaan dengan masyarakat kurang mampu melalui ibadah qurban.</p>
+        </div>
+        <div>
+          <h3 style="margin-bottom: 1rem; color: var(--secondary);">Misi</h3>
+          <ul style="list-style-type: none;">
+            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="margin-right: 8px;"></i> Memudahkan berqurban bagi dosen dan tenaga kependidikan</li>
+            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="margin-right: 8px;"></i> Menyalurkan hewan qurban ke daerah yang membutuhkan</li>
+            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="margin-right: 8px;"></i> Membangun solidaritas sesama civitas akademika</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="margin-bottom: 1rem; color: var(--secondary);">Kontak</h3>
+          <p><i class="fas fa-phone" style="margin-right: 8px;"></i> (0751) 123456</p>
+          <p><i class="fas fa-envelope" style="margin-right: 8px;"></i> qurban@unp-peduli.ac.id</p>
+          <p><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Gd. Rektorat UNP Lt. 3</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div class="logo" style="margin-bottom: 1rem;">
+        <img src="https://unp.ac.id/patch/images/800/88c55c3c3da3b19e7b7939feedaceb35.png" alt="UNP Peduli Logo">
+        <div class="logo-text">UNP <span>Peduli</span></div>
+      </div>
+      <p>Program Qurban 1447 Hijriyah / 2026 Masehi</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p style="margin-top: 1rem; font-size: 0.9rem;">&copy; 2026 UNP Peduli. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- Notification -->
+  <div id="notification" class="notification">
+    <i class="fas fa-check-circle"></i>
+    <span id="notification-message">Peserta berhasil didaftarkan!</span>
   </div>
-
+  
   <script>
-    // Navigation
-    const navLinks = document.querySelectorAll('.nav-link');
-    const contentSections = document.querySelectorAll('.content-section');
-
-    navLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = e.target.getAttribute('data-target');
-        
-        // Update active nav link
-        navLinks.forEach(navLink => navLink.classList.remove('active'));
-        e.target.classList.add('active');
-        
-        // Show target section
-        contentSections.forEach(section => {
-          section.classList.remove('active');
-          if (section.id === target) {
-            section.classList.add('active');
-          }
-        });
-      });
-    });
-
-    // Data storage
+    // Ambil dari localStorage jika ada
     let peserta = JSON.parse(localStorage.getItem('peserta')) || [];
     let potongan = JSON.parse(localStorage.getItem('potongan')) || [];
-
+    
+    // Notification function
+    function showNotification(message, type = 'success') {
+      const notification = document.getElementById('notification');
+      const notificationMessage = document.getElementById('notification-message');
+      
+      notificationMessage.textContent = message;
+      notification.className = `notification ${type}`;
+      notification.classList.add('show');
+      
+      // Set icon based on type
+      const icon = notification.querySelector('i');
+      icon.className = type === 'success' ? 'fas fa-check-circle' : 'fas fa-exclamation-circle';
+      
+      setTimeout(() => {
+        notification.classList.remove('show');
+      }, 3000);
+    }
+    
+    // Smooth scrolling for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
     // Form pendaftaran peserta qurban
     document.getElementById('form-peserta').addEventListener('submit', function(e) {
       e.preventDefault();
       const data = {
         nama: document.getElementById('nama').value,
         nip: document.getElementById('nip').value,
-        unit: document.getElementById('unit').value,
-        timestamp: new Date().toISOString()
+        unit: document.getElementById('unit').value
       };
       
-      // Cek apakah NIP sudah ada
-      const existingIndex = peserta.findIndex(p => p.nip === data.nip);
-      if (existingIndex !== -1) {
-        if(confirm('NIP sudah terdaftar. Update data?')) {
-          peserta[existingIndex] = data;
-        } else {
-          return;
-        }
-      } else {
-        peserta.push(data);
+      // Check if NIP already exists
+      const existing = peserta.find(p => p.nip === data.nip);
+      if (existing) {
+        showNotification('NIP sudah terdaftar!', 'error');
+        return;
       }
       
+      peserta.push(data);
       localStorage.setItem('peserta', JSON.stringify(peserta));
-      alert('Data peserta berhasil disimpan!');
+      showNotification('Peserta berhasil didaftarkan!');
       this.reset();
-      isiDropdownNIP(); // Update dropdown
     });
-
-    // Fungsi untuk mengisi dropdown NIP
-    function isiDropdownNIP() {
-      const selectNIP = document.getElementById('nip-potong');
-      
-      // Kosongkan dropdown kecuali opsi pertama
-      while(selectNIP.options.length > 1) {
-        selectNIP.remove(1);
-      }
-      
-      // Tambahkan opsi dari data peserta
-      peserta.forEach(p => {
-        const option = document.createElement('option');
-        option.value = p.nip;
-        option.textContent = `${p.nip} - ${p.nama} (${p.unit})`;
-        selectNIP.appendChild(option);
-      });
-      
-      // Jika ada data potongan sebelumnya, tampilkan
-      if(potongan.length > 0) {
-        const lastPotongan = potongan[potongan.length - 1];
-        document.getElementById('potongan').value = lastPotongan.jumlah || '';
-      }
-    }
-
+    
     // Form input potongan gaji
     document.getElementById('form-potongan').addEventListener('submit', function(e) {
       e.preventDefault();
-      const nip = document.getElementById('nip-potong').value;
-      const jumlah = parseFloat(document.getElementById('potongan').value);
+      const data = {
+        nip: document.getElementById('nip-potong').value,
+        jumlah: parseFloat(document.getElementById('potongan').value)
+      };
       
-      if (!nip || isNaN(jumlah)) {
-        alert('Harap lengkapi data dengan benar!');
+      // Check if participant exists
+      const participantExists = peserta.some(p => p.nip === data.nip);
+      if (!participantExists) {
+        showNotification('NIP tidak ditemukan! Silakan daftar peserta terlebih dahulu.', 'error');
         return;
       }
       
-      const data = {
-        nip: nip,
-        jumlah: jumlah,
-        timestamp: new Date().toISOString()
-      };
-      
-      // Update jika NIP sudah ada
+      // Update if NIP already exists
       const index = potongan.findIndex(p => p.nip === data.nip);
       if (index !== -1) {
-        potongan[index] = data;
+        potongan[index].jumlah = data.jumlah;
+        showNotification('Potongan gaji diperbarui!');
       } else {
         potongan.push(data);
+        showNotification('Potongan gaji disimpan!');
       }
       
       localStorage.setItem('potongan', JSON.stringify(potongan));
-      alert('Potongan gaji berhasil disimpan!');
       this.reset();
-      tampilkanLaporan(); // Update laporan
     });
-
+    
     // Tampilkan laporan qurban
     function tampilkanLaporan() {
-      const container = document.getElementById('laporan-container');
+      const laporanElement = document.getElementById('laporan');
       
       if (peserta.length === 0) {
-        container.innerHTML = "<p style='text-align:center;padding:20px;color:#666;'>Belum ada peserta terdaftar.</p>";
+        laporanElement.innerHTML = `
+          <div style="text-align: center; padding: 2rem; background: white; border-radius: 8px;">
+            <i class="fas fa-info-circle" style="font-size: 3rem; color: #666; margin-bottom: 1rem;"></i>
+            <h3 style="color: var(--primary);">Belum ada peserta terdaftar</h3>
+            <p>Silakan daftarkan peserta melalui form pendaftaran di atas.</p>
+          </div>
+        `;
         return;
       }
-
+      
       let laporanHTML = `
         <table>
           <thead>
@@ -528,21 +668,22 @@
               <th>No</th>
               <th>Nama</th>
               <th>NIP</th>
-              <th>Unit/Fakultas</th>
+              <th>Unit</th>
               <th>Potongan/bulan</th>
               <th>Total (12 bulan)</th>
             </tr>
           </thead>
-          <tbody>`;
+          <tbody>
+      `;
       
       let totalKeseluruhan = 0;
-
+      
       peserta.forEach((p, index) => {
         const pot = potongan.find(pt => pt.nip === p.nip);
         const potonganBulanan = pot ? pot.jumlah : 0;
         const total = potonganBulanan * 12;
         totalKeseluruhan += total;
-
+        
         laporanHTML += `
           <tr>
             <td>${index + 1}</td>
@@ -551,65 +692,54 @@
             <td>${p.unit}</td>
             <td>Rp ${potonganBulanan.toLocaleString('id-ID')}</td>
             <td>Rp ${total.toLocaleString('id-ID')}</td>
-          </tr>`;
+          </tr>
+        `;
       });
-
+      
       laporanHTML += `
           <tr class="total-row">
             <td colspan="5"><strong>Total Keseluruhan</strong></td>
             <td><strong>Rp ${totalKeseluruhan.toLocaleString('id-ID')}</strong></td>
           </tr>
         </tbody>
-      </table>`;
-
-      container.innerHTML = laporanHTML;
-    }
-
-    // Fungsi untuk menampilkan modal password
-    function showPasswordModal() {
-      document.getElementById('passwordModal').style.display = 'flex';
-      document.getElementById('resetPassword').focus();
-    }
-
-    // Fungsi untuk menyembunyikan modal password
-    function hidePasswordModal() {
-      document.getElementById('passwordModal').style.display = 'none';
-      document.getElementById('resetPassword').value = '';
-    }
-
-    // Fungsi reset data dengan password
-    function confirmResetData() {
-      const password = document.getElementById('resetPassword').value;
-      const correctPassword = "20251447adminsaja"; // Password yang ditentukan
+      </table>
       
-      if (password === correctPassword) {
-        if(confirm('Yakin ingin menghapus semua data peserta dan potongan?')) {
-          localStorage.clear();
-          peserta = [];
-          potongan = [];
-          alert('Semua data berhasil direset!');
-          isiDropdownNIP();
-          tampilkanLaporan();
-          hidePasswordModal();
-        }
-      } else {
-        alert('Password salah! Reset data dibatalkan.');
-        hidePasswordModal();
-      }
-    }
-
-    // Inisialisasi saat halaman dimuat
-    document.addEventListener('DOMContentLoaded', function() {
-      isiDropdownNIP();
-      document.querySelector('.nav-link.active').click();
+      <div style="margin-top: 2rem; display: flex; justify-content: flex-end;">
+        <button onclick="exportToExcel()" class="btn">
+          <i class="fas fa-file-excel"></i> Export to Excel
+        </button>
+      </div>
+      `;
       
-      // Auto-fill potongan saat memilih NIP
-      document.getElementById('nip-potong').addEventListener('change', function() {
-        const selectedNIP = this.value;
-        const pot = potongan.find(p => p.nip === selectedNIP);
-        document.getElementById('potongan').value = pot ? pot.jumlah : '';
+      laporanElement.innerHTML = laporanHTML;
+    }
+    
+    // Export to Excel function
+    function exportToExcel() {
+      // This is a simplified version. In a real app, you might use a library like SheetJS
+      let csv = 'No,Nama,NIP,Unit,Potongan per Bulan,Total (12 bulan)\n';
+      
+      peserta.forEach((p, index) => {
+        const pot = potongan.find(pt => pt.nip === p.nip);
+        const potonganBulanan = pot ? pot.jumlah : 0;
+        const total = potonganBulanan * 12;
+        
+        csv += `${index + 1},${p.nama},${p.nip},${p.unit},${potonganBulanan},${total}\n`;
       });
-    });
+      
+      const hiddenElement = document.createElement('a');
+      hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
+      hiddenElement.target = '_blank';
+      hiddenElement.download = 'laporan_qurban_unp.csv';
+      hiddenElement.click();
+      
+      showNotification('Laporan berhasil diekspor ke CSV!');
+    }
+    
+    // Initialize - show report if there's data
+    if (peserta.length > 0) {
+      tampilkanLaporan();
+    }
   </script>
 </body>
 </html>
